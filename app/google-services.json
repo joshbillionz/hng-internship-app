@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "845918990004",
+    "firebase_url": "https://hng-internship-app.firebaseio.com",
+    "project_id": "hng-internship-app",
+    "storage_bucket": "hng-internship-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:845918990004:android:7a9fdac09e8ee62ef771e1",
+        "android_client_info": {
+          "package_name": "com.codebillionz.android.hng_internship_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "845918990004-vmarufu3b1r7cfeeq0cuca7cp1jfeu3f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codebillionz.android.hng_internship_app",
+            "certificate_hash": "40ac488361489b2a216a3665eeb09d736275fdac"
+          }
+        },
+        {
+          "client_id": "845918990004-4vbotps0j1lre05r53cu9ddtj07e1p62.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPilW-AYRQeJum5AG4Eaa_DLsbj6rN1Nc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "845918990004-4vbotps0j1lre05r53cu9ddtj07e1p62.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
