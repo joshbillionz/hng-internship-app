@@ -39,11 +39,11 @@ public class MembersAdapter extends RecyclerView.Adapter<MembersAdapter.MembersV
 
     @Override
     public void onBindViewHolder(@NonNull final MembersAdapter.MembersVH holder, final int position) {
-        Picasso.get()
-                .load("https://drive.google.com/open?id=1DbWQs35dHg1RjFnckZyC-kZHpLBq00bS")
-                .into(holder.membersPic);
+//        Picasso.get()
+//                .load("https://drive.google.com/open?id=1DbWQs35dHg1RjFnckZyC-kZHpLBq00bS")
+//                .into(holder.membersPic);
         holder.membersName.setText(membersList.get(position).getUsersName());
-        holder.memberOD.setText(membersList.get(position).getOtherDetails());
+        holder.memberOD.setText(membersList.get(position).getWhatYouDo());
     }
 
     @Override

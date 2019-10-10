@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.codebillionz.android.hng_internship_app.Adapters.MembersAdapter;
@@ -20,7 +21,7 @@ public class MembersListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_members_list);
 
         final ArrayList<Members> members = new ArrayList<>();
-        RecyclerView memberRecycler = findViewById(R.id.members_recycler);
+        final RecyclerView memberRecycler = findViewById(R.id.members_recycler);
         MembersAdapter adapter = new MembersAdapter(members, this);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         memberRecycler.setLayoutManager(mLayoutManager);
@@ -30,28 +31,54 @@ public class MembersListActivity extends AppCompatActivity {
         // Create a list of members
 
         members.add(new Members("https://drive.google.com/open?id=1DbWQs35dHg1RjFnckZyC-kZHpLBq00bS",
-                "HNG Internship 2019", "08099993939"));
+                "HNG 2019", "Hotels.ng",
+                "Android Developer", "2348899403323", "hng@hng.com", "Status"));
         members.add(new Members("https://drive.google.com/open?id=1DbWQs35dHg1RjFnckZyC-kZHpLBq00bS",
-                "HNG Internship 2019", "08099993939"));
+                "HNG Internship ", "Dubai Flys",
+                "Mobile Developer", "198382330232", "hng@hng.com", "Status"));
         members.add(new Members("https://drive.google.com/open?id=1DbWQs35dHg1RjFnckZyC-kZHpLBq00bS",
-                "HNG Internship 2019", "08099993939"));
+                "Internship 2019", "Will Smith",
+                "Web Developer", "08097000000", "hng@hng.com", "Status"));
         members.add(new Members("https://drive.google.com/open?id=1DbWQs35dHg1RjFnckZyC-kZHpLBq00bS",
-                "HNG Internship 2019", "08099993939"));
+                "HNG", "Burger Vicks",
+                "Digital Marketing", "08097000000", "hng@hng.com", "Status"));
+        members.add(new Members("https://drive.google.com/open?id=19deoOFEDOjbNM_c2Ig1boL8mCNR5LKbx",
+                "Internship", "Louis Gucci",
+                "DevOps", "08282992390", "hng@hng.com", "Status"));
         members.add(new Members("https://drive.google.com/open?id=1DbWQs35dHg1RjFnckZyC-kZHpLBq00bS",
-                "HNG Internship 2019", "08099993939"));
+                "HNG 6.0", "Bill Gill",
+                "Project Manager", "0818122277", "hng@hng.com", "Status"));
         members.add(new Members("https://drive.google.com/open?id=1DbWQs35dHg1RjFnckZyC-kZHpLBq00bS",
-                "HNG Internship 2019", "08099993939"));
+                "HNGi6.0", "Hebert John",
+                "UI/UX Designer", "076732232400", "hng@hng.com", "Status"));
         members.add(new Members("https://drive.google.com/open?id=1DbWQs35dHg1RjFnckZyC-kZHpLBq00bS",
-                "HNG Internship 2019", "08099993939"));
-        members.add(new Members("https://drive.google.com/open?id=1DbWQs35dHg1RjFnckZyC-kZHpLBq00bS",
-                "HNG Internship 2019", "08099993939"));
-        members.add(new Members("https://drive.google.com/open?id=1DbWQs35dHg1RjFnckZyC-kZHpLBq00bS",
-                "HNG Internship 2019", "08099993939"));
-        members.add(new Members("https://drive.google.com/open?id=1DbWQs35dHg1RjFnckZyC-kZHpLBq00bS",
-                "HNG Internship 2019", "08099993939"));
-        members.add(new Members("https://drive.google.com/open?id=1DbWQs35dHg1RjFnckZyC-kZHpLBq00bS",
-                "HNG Internship 2019", "08099993939"));
+                "2048 2019", "The Mixture",
+                "Android Developer", "082936734u", "hng@hng.com", "Status"));
         adapter.notifyDataSetChanged();
 
+        adapter.setOnItemClickListener(new MembersAdapter.OnItemClickListener() {
+            @Override
+            public void clickedMe(int position) {
+                String name = members.get(position).getName();
+                String usersName = members.get(position).getUsersName();
+                String whatYouDo = members.get(position).getWhatYouDo();
+                String phoneNo = members.get(position).getPhoneNumber();
+                String email = members.get(position).getEmail();
+                String status = members.get(position).getOtherDetails();
+                String imgUrl = members.get(position).getImageUrl().trim();
+                Intent intent = new Intent(MembersListActivity.this, MembersDetails.class);
+                intent.putExtra("imageUrl", imgUrl);
+                intent.putExtra("name", name);
+                intent.putExtra("username", usersName);
+                intent.putExtra("skill", whatYouDo);
+                intent.putExtra("phoneNo", phoneNo);
+                intent.putExtra("email", email);
+                intent.putExtra("status", status);
+                startActivity(intent);
+            }
+        });
+
     }
+
+
 }

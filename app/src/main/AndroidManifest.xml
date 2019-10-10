@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.codebillionz.android.hng_internship_app">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -12,8 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MessagesActivityActivity"></activity>
+        <activity android:name=".MembersDetails"></activity>
+        <activity android:name=".MessagesActivityActivity" />
         <activity android:name=".ChatForumActivity" />
         <activity android:name=".MembersListActivity">
             <intent-filter>
@@ -26,7 +28,7 @@
         <activity android:name=".SignUpActivity" />
         <activity android:name=".InternDashboardActivity" />
         <activity android:name=".MentorDashboardActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
