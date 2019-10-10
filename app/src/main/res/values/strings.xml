@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">hng-internship-app</string>
+    <string name="forum">Chat Forum</string>
+    <string name="send_button_label">Send</string>
 </resources>
