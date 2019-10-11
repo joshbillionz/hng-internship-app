@@ -3,19 +3,31 @@
     package="com.codebillionz.android.hng_internship_app">
 
     <application
+        android:name=".hng_internship_app"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MessagesActivityActivity"></activity>
+        <activity android:name=".ComplaintsActivity"></activity>
+        <activity android:name=".MentorsListActivity" />
+        <activity android:name=".MentorProfileActivity" />
+        <activity android:name=".InternProfileActivity" />
+        <activity android:name=".InternsListActivity" />
+        <activity android:name=".EvictedInternsActivity" />
+        <activity android:name=".ProbedInternsActivity" />
+        <activity android:name=".MessagesActivityActivity" />
         <activity android:name=".ChatForumActivity" />
         <activity android:name=".MembersListActivity" />
         <activity android:name=".SignInActivity" />
         <activity android:name=".SignUpActivity" />
-        <activity android:name=".InternDashboardActivity" />
-        <activity android:name=".MentorDashboardActivity" />
+        <activity
+            android:name=".InternDashboardActivity"
+            android:label="DashBoard (I)" />
+        <activity
+            android:name=".MentorDashboardActivity"
+            android:label="DashBoard (M)" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

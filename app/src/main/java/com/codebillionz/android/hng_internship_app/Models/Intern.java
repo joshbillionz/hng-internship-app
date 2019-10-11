@@ -6,7 +6,7 @@ import java.util.UUID;
 
 public class Intern {
     private final String USER_TYPE =  "intern";
-    private UUID id;
+    private String id;
     private String name;
     private String track;
     private String displayName;
@@ -18,11 +18,11 @@ public class Intern {
     private boolean isUnderProbation;
     private boolean isEvicted;
 
-    Intern(){
+    public Intern(){
 
     }
 
-    Intern(UUID id, String name, String displayName, String email, String track, int stage){
+    public Intern(String id, String name, String displayName, String email, String track, int stage){
         this.id= id;
         this.name= name;
         this.displayName= displayName;
@@ -43,7 +43,7 @@ public class Intern {
         return USER_TYPE;
     }
 
-    public UUID getId() {
+    public String getId() {
         return id;
     }
 
@@ -90,7 +90,7 @@ public class Intern {
     //SETTERS
 
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 

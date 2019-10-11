@@ -7,7 +7,7 @@ import java.util.UUID;
 public class Mentor {
 
     private final String USER_TYPE =  "mentor";
-    private UUID id;
+    private String id;
     private String name;
     private String track;
     private String displayName;
@@ -15,8 +15,10 @@ public class Mentor {
     private List students;
 
 
+    public Mentor(){
 
-    Mentor(UUID id, String name,  String displayName, String email, String track){
+    }
+    public Mentor(String id, String name,  String displayName, String email, String track){
          this.id= id;
          this.name=name;
          this.displayName = displayName;
@@ -33,7 +35,7 @@ public class Mentor {
         return USER_TYPE;
     }
 
-    public UUID getId() {
+    public String getId() {
         return id;
     }
 
@@ -61,7 +63,7 @@ public class Mentor {
     //SETTERS
 
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 

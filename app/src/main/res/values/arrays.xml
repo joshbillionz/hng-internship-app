@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="account_type">
+        <item>mentor</item>
+        <item>intern</item>
+    </string-array>
+
+    <string-array name="track">
+        <item>Mobile</item>
+        <item>BackEnd</item>
+        <item>FrontEnd</item>
+        <item>Digital Marketing</item>
+        <item>Machine learning</item>
+        <item>UI/UX</item>
+
+    </string-array>
+
+
+</resources>

@@ -16,10 +16,10 @@ public class GradingComplaint {
     private int stage;
     private boolean isSolved;
 
-    GradingComplaint(){
+    public GradingComplaint(){
 
     }
-    GradingComplaint(Date dateLaid, Intern complainant, String title, String description, int stage ){
+    public GradingComplaint(Date dateLaid, Intern complainant, String title, String description, int stage){
       this.dateLaid= dateLaid;
       this.complainant = complainant;
       this.title = title;
