@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -8,77 +8,52 @@
 
     <LinearLayout
         android:layout_width="330dp"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="clip_vertical"
         android:orientation="vertical"
         android:padding="@dimen/spacing_large">
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="@dimen/spacing_middle" />
-
-<!--        <ImageView-->
-<!--        android:layout_width="80dp"-->
-<!--        android:layout_height="80dp"-->
-<!--        android:layout_gravity="center_horizontal"-->
-<!--        android:src="@drawable/logo_small"-->
-<!--        android:tint="@color/green_300"-->
-<!--        app:srcCompat="@drawable/common_google_signin_btn_icon_light_normal" />-->
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="@dimen/spacing_large" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/spacing_medium"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
             android:text="Welcome to HNGi"
             android:textColor="@color/green_300"
+            android:textSize="18sp"
             android:textStyle="bold" />
-<!--            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"-->
-
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/spacing_medium"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="8dp"
             android:text="Sign in to continue"
             android:textColor="@color/blue_grey_300" />
-<!--        android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"-->
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="USERNAME"
+            android:text="EMAIL"
             android:textAlignment="center"
 
             android:textColor="@color/blue_grey_200" />
-<!--        android:textAppearance="@style/Base.TextAppearance.AppCompat.Caption"-->
 
         <EditText
             android:id="@+id/et_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="-4dp"
-            android:layout_marginRight="-4dp"
+            android:layout_marginBottom="8dp"
             android:inputType="text"
             android:maxLength="50"
             android:maxLines="1"
             android:singleLine="true"
             android:textColor="@color/blue_grey_800"
             android:theme="@style/EditText.Green" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="@dimen/spacing_mlarge" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -87,12 +62,12 @@
             android:textAlignment="center"
             android:textColor="@color/blue_grey_200" />
 
+
         <EditText
             android:id="@+id/et_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="-4dp"
-            android:layout_marginRight="-4dp"
+            android:layout_marginBottom="8dp"
             android:inputType="textPassword"
             android:maxLength="50"
             android:maxLines="1"
@@ -100,26 +75,17 @@
             android:textColor="@color/blue_grey_800"
             android:theme="@style/EditText.Green" />
 
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="@dimen/spacing_mxlarge" />
-
         <Button
             android:id="@+id/btn_sign_in"
             android:layout_width="match_parent"
             android:layout_height="55dp"
-            android:layout_marginLeft="-4dp"
-            android:layout_marginRight="-4dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
             android:background="@drawable/btn_rounded_green_300"
             android:text="S I G N  I N"
             android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:textStyle="bold" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="@dimen/spacing_medium" />
 
         <LinearLayout
             android:id="@+id/sign_up_for_account"
@@ -139,10 +105,7 @@
 
         </LinearLayout>
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="@dimen/spacing_xlarge" />
-
     </LinearLayout>
 
-</RelativeLayout>
+
+</LinearLayout>

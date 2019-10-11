@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ComplaintsActivity"></activity>
+        <activity android:name=".AnnouncementsActivity"></activity>
+        <activity android:name=".ComplaintsActivity" />
         <activity android:name=".MentorsListActivity" />
         <activity android:name=".MentorProfileActivity" />
         <activity android:name=".InternProfileActivity" />

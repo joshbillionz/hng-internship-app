@@ -31,7 +31,7 @@ public class MentorDashboardActivity extends AppCompatActivity {
     FirebaseDatabase database = FirebaseDatabase.getInstance();
 
     Button profileButton, internsButton, classButton, announceButton;
-    TextView complaintsTextView,probedInternsTextView,evictedInternsTextView,probedCountTextView,evictedCountTextView,complaintsCountTextView;
+    TextView complaintsTextView,probedInternsTextView,evictedInternsTextView,announcementsTextView,probedCountTextView,evictedCountTextView,complaintsCountTextView;
 
     String mentorName;
 
@@ -40,7 +40,6 @@ public class MentorDashboardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mentor_dashboard);
-        getSupportActionBar().setTitle(Html.fromHtml("<font color=\"#616161\">" + "Dashboard" + "</font>"));
         initializeWidgets();
         initializeListeners();
 
@@ -79,6 +78,7 @@ public class MentorDashboardActivity extends AppCompatActivity {
         classButton = findViewById(R.id.classButton);
         announceButton = findViewById(R.id.announceButton);
         complaintsTextView = findViewById(R.id.complaintsTextView);
+        announcementsTextView =findViewById(R.id.announcementsTextView);
         probedInternsTextView = findViewById(R.id.probedTextView);
         evictedInternsTextView = findViewById(R.id.evictedTextView);
         complaintsCountTextView = findViewById(R.id.complaintsCounts);
@@ -116,6 +116,13 @@ public class MentorDashboardActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 launchComplaintsActivity();
+            }
+        });
+
+        announcementsTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                launchAnnouncementsActivity();
             }
         });
         
@@ -157,6 +164,12 @@ public class MentorDashboardActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    private void launchAnnouncementsActivity(){
+        Intent intent = new Intent(this, AnnouncementsActivity.class);
+        startActivity(intent);
+    }
+
+
     private void launchAnnounceDialogue(){
         new AnnounceDialog().showDialog(this);
     }
@@ -191,8 +204,8 @@ public class MentorDashboardActivity extends AppCompatActivity {
             dialog.setContentView(R.layout.dialogue_announce);
             dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
-            EditText stage = findViewById(R.id.stageEditText);
-            final EditText message = findViewById(R.id.annnouncementMessage);
+            EditText stage = dialog.findViewById(R.id.stageEditText);
+            final EditText message = dialog.findViewById(R.id.annnouncementMessage);
             TextView cancel = dialog.findViewById(R.id.cancel);
             TextView submit = dialog.findViewById(R.id.submitAnnouncement);
 
@@ -201,8 +214,10 @@ public class MentorDashboardActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     String announcementId = UUID.randomUUID().toString();
+                    if(message.getText()!=null){
                     Announcement announcement = new Announcement(announcementId,message.getText().toString(), "mentor" );
                     database.getReference().child("announcements").child(announcementId).setValue(announcement);
+                    }
 
                     dialog.dismiss();
                 }

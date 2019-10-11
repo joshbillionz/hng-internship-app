@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -45,6 +46,8 @@ public class InternsListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_interns_list);
+        getSupportActionBar().setTitle(Html.fromHtml("<font color=\"#616161\">" + "Interns List" + "</font>"));
+
         userInterns = new ArrayList<>();
         progressBar = findViewById(R.id.progressBar);
 

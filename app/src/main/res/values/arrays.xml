@@ -15,5 +15,13 @@
 
     </string-array>
 
+    <string-array name="complain_type">
+        <item>Ungraded</item>
+        <item>Not promoted</item>
+        <item>Abuse</item>
+        <item>Task help</item>
+
+    </string-array>
+
 
 </resources>
